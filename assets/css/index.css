@@ -83,10 +83,10 @@ a:hover>div {
 .logo-image img {
     display: flex;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    margin-right: var(--5p);
+    /* margin-right: var(--15p); */
 }
 
 .navigators {
@@ -125,6 +125,20 @@ a:hover>div {
     background-image: url('../img/capa2.png');
     height: 90vh;
 
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-text>h1 {
+    font-size: 3rem;
+}
+
+.header-text>span {
+    font-size: 2rem;
 }
 
 .input-containar-2 {
@@ -181,7 +195,7 @@ a:hover>div {
 
 .image-cover-of-header {
     justify-content: space-between;
-    background: #00000033;
+    background: #00000070;
 }
 
 .image-cover-of-header>.text-wrapper {
