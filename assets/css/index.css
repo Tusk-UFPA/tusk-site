@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --2p: 2px;
+    --5p: 5px;
+    --15p: 15px;
+    --10p: 30px;
+    --side-padding: 8rem;
+}
+
+html {
+    background-image: url('../img/cool-background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    font-family: 'montserrat', sans-serif;
+    color: #fff;
+}
+
+.navbar {
+    --_bg: #090733d3;
+    --_blur: blur(8px);
+    --_nav-bar-padding: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--_nav-bar-padding) 5rem;
+
+    background: var(--_bg);
+
+    position: sticky;
+    top: 0;
+
+}
+
+.navbar,
+.navbar * {
+    transition: 500ms;
+}
+
+.navbar.sticking {
+    --_bg: #252B48;
+    --_nav-bar-padding: 0.5rem;
+    /* filter: blur(8px); */
+    /* -webkit-filter: blur(8px); */
+
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.logo-image img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: var(--5p);
+}
+
+.navigators {
+    display: flex;
+    padding: 1px;
+}
+
+.home,
+.sobre {
+    font-size: 2rem;
+    padding: 0 var(--10p);
+
+}
+
+.home {}
+
+.sobre {}
+
+.containar {}
+
+.input-containar-1,
+.input-containar-2,
+.input-containar-3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.input-containar-2,
+.input-containar-3 {
+    margin: var(--10p) 0;
+}
+
+.input-containar-1 {
+    background-image: url('../img/panel-solar.jpg');
+
+}
+
+.input-containar-2 {
+    background-image: url('../img/Energia-solar-1.jpg');
+}
+
+.input-containar-3 {
+    background-image: url('../img/equipi-solar.jpg');
+}
+
+.image-cards-containar {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    padding: var(--10p) var(--side-padding);
+}
+
+.image-card-1,
+.image-card-2,
+.image-card-3 {
+    margin: var(--5p);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.image-card-1 {
+    background-image: url(../img/solar-ajusar.jpg);
+
+}
+
+.image-card-2 {
+    background-image: url(../img/controlador.webp);
+
+}
+
+.image-card-3 {
+    background-image: url(../img/geracao-energia-eolica-bg.webp);
+
+}
+
+.image-cover-of-header,
+.image-cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.image-cover-of-header {
+    background: #00000033;
+}
+
+.image-cover {
+    background: #00000081;
+}
+
+.info-containar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    padding: var(--10p);
+    border: rgb(0, 183, 255) 1px solid;
+}
+
+.info-image,
+.info-content {
+    width: 100%;
+    height: 100%;
+    border: red 1px solid;
+}
+
+/* .info-content {
+    width: 100%;
+    border: red 1px solid;
+
+} */
