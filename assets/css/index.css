@@ -33,14 +33,15 @@ a {
     color: #fff;
 }
 
-a:hover {
+a:hover>div {
     color: orange;
-    font-size: 1.5rem;
-    transition: font-size 2sm;
+    height: 1.2rem;
+    font-size: 1.2rem;
+    transition: font-size 100ms;
 }
 
 .navbar {
-    --_bg: #09073300;
+    --_bg: #09073338;
     --_blur: blur(8px);
     --_nav-bar-padding: .3rem;
 
@@ -121,7 +122,7 @@ a:hover {
 }
 
 .input-containar-1 {
-    background-image: url('../img/panel-solar.jpg');
+    background-image: url('../img/capa2.png');
     height: 90vh;
 
 }
@@ -220,6 +221,8 @@ a:hover {
     height: 20vh;
     background: #24242b;
 }
+
+@media screen {}
 
 /* .info-content {
     width: 100%;
