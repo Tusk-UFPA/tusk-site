@@ -144,32 +144,35 @@ a:hover>div,
     font-size: 2rem;
 }
 
-.solucao{
+.solucao {
     display: flex;
     width: 100%;
     height: 60vh;
     padding: var(--10p) 5rem;
 }
 
-.solucao>.img-container{
+.solucao>.img-container {
     width: 100%;
     height: 100%;
     background-image: url(../img/energia-solar-e-eolica.jpg);
 }
 
-.solucao-text{
+.solucao-text {
     height: 100%;
     width: 100%;
     background: #000000b0;
-    padding: 2rem 1rem ;
+    padding: 2rem 1rem;
     overflow: hidden;
 }
-.solucao-text>h2{
+
+.solucao-text>h2 {
     margin-bottom: 1rem;
 }
-.solucao-text>p{
+
+.solucao-text>p {
     font-size: 1.2rem;
 }
+
 .input-containar-2 {
     background-image: url('../img/Energia-solar-1.jpg');
 }
@@ -213,7 +216,7 @@ a:hover>div,
 
 }
 
-.image-cover-of-header{
+.image-cover-of-header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -228,12 +231,12 @@ a:hover>div,
     width: 100%;
 }
 
-.image-cover:hover>.img-text{
+.image-cover:hover>.img-text {
     height: 100%;
 }
 
 
-.img-text{
+.img-text {
     display: flex;
     flex-direction: column;
     height: 20%;
@@ -241,37 +244,40 @@ a:hover>div,
     padding: 1.5rem 1rem 4rem 1rem;
     background: #0000008a;
 }
-.img-text, .img-text>span{
+
+.img-text,
+.img-text>span {
     transition: 500ms;
 }
-.img-text > h2{
+
+.img-text>h2 {
     margin-bottom: 1rem;
     font-size: 1.6rem;
 }
 
-.img-text>p{
+.img-text>p {
     font-size: 1.2rem;
     color: #c5c5c5;
-    
+
 }
 
-.img-text>span{
+.img-text>span {
     display: none;
     font-size: 1.4rem;
     color: #c5c5c5;
-    text-align:justify;
+    text-align: justify;
 
 }
 
-.img-text:hover>span{
+.img-text:hover>span {
     display: block;
 }
 
-.line{
+.line {
     background: #ccc;
     width: 100%;
     height: 1px;
-    margin:  1rem 0;
+    margin: 1rem 0;
 }
 
 .image-cover-of-header {
@@ -319,9 +325,10 @@ a:hover>div,
     padding: 7rem;
 }
 
-.request-form>h2{
+.request-form>h2 {
     margin-bottom: var(--10p);
 }
+
 .forms {
 
     border: red solid 1px;
@@ -383,7 +390,6 @@ input[type=submit]:hover {
 .contato-info {
     display: flex;
     align-items: center;
-    justify-content: center;
     justify-content: space-around;
 
     width: 50%;
@@ -419,7 +425,16 @@ input[type=submit]:hover {
     width: 50%;
     padding: 0.5rem;
 }
-
+.sobre-wrapper,
+    .sobre-wrapper-only{
+    display: flex;
+    justify-content: space-evenly;
+align-items: center;
+width: 100%;
+}
+.sobre-wrapper-only{
+    width: 50%;
+}
 /* .faceb,
 .inst {
     display: flex;
@@ -450,36 +465,103 @@ input[type=submit]:hover {
     height: 100%;
 }
 
-.sobre-container{
+.sobre-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 40vh;
     background-color: #24242b;
 }
-.nos{
+
+.nos {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.nos-img-container{
+
+.nos-img-container {
     width: 200px;
     height: 200px;
     background-color: #fff;
     border-radius: 50%;
 }
-.nos>span{
+
+.nos>span {
     padding: var(--10p);
 
 }
+
 .footer {
     height: 10vh;
     background: #24242b;
 }
 
 
-@media screen {}
+@media only screen and (max-width: 770px) {
+    .navigators {
+        flex-direction: column;
+    }
+
+    .input-containar-1,
+    .input-containar-2,
+    .input-containar-3 {
+        width: 100%;
+    }
+
+    /* .navbar{
+    position:sticky;
+
+    } */
+
+    .sobre-container {
+        flex-direction: column;
+        height: fit-content;
+        padding: 2rem 0;
+    }
+
+    .solucao {
+        flex-direction: column;
+        padding: 1rem 0;
+        height: 50rem;
+
+    }
+    /* .sobre-wrapper{
+        flex-direction: ;
+    } */
+    .image-cards-containar{
+        flex-direction: column;
+        height: fit-content;
+        padding: 0.5rem;
+
+    }
+    .image-card-1,
+.image-card-2,
+.image-card-3 {
+        height: 50rem;
+    }
+    .forms-container{
+        max-width: 100%;
+    }
+    .contato-container{
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        margin-bottom: 1rem;
+    }
+    .contato-info,.contato-socia{
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        padding: 1rem 5rem;
+        
+    }
+    .footer{
+        height: fit-content;
+        padding: 2rem;
+        margin-top: 1rem;
+    }
+}
 
 /* .info-content {
     width: 100%;
