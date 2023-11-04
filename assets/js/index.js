@@ -1,8 +1,6 @@
 const nav = document.querySelector("#navbar");
 const scrollWatcher = document.createElement("div");
 
-console.log(nav);
-
 scrollWatcher.setAttribute("data-scroll-watcher", "");
 nav.before(scrollWatcher);
 
@@ -15,3 +13,34 @@ const navOberver = new IntersectionObserver(
 );
 
 navOberver.observe(scrollWatcher);
+
+
+document.getElementById("forms").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+
+  // Create a JSON object with latitude and longitude
+  const data = {
+      nome:nome,
+      email: email
+  };
+
+  console.log(data)
+  fetch('/', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+      })
+      .then(response => response.text())
+      .then(result => {
+          document.getElementById("forms-container").innerHTML = result;
+          console.log(result)
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+});

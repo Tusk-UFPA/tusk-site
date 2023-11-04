@@ -18,7 +18,8 @@ def index():
 def post():
     data=request.json
     print(data)
-    return send_from_directory(os.path.dirname(__file__), "index.html")
+    return send_from_directory(os.path.dirname(__file__), "tanx.html")
+
 
 # @app.route('/assets/js/<path:filename>"')
 # def js(filename):

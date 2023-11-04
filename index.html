@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Lexend+Deca&display=swap"
+        rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -26,6 +27,10 @@
                 TUSK
             </div> -->
         </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
         <div class="navigators">
             <a href=" #home">
                 <div class="home">Home</div>
@@ -64,9 +69,11 @@
                 <!-- jd -->
             </div>
             <div class="solucao-text">
-                <h2>Fornecendo Eletricidade a Comunidades Isoladas na Amazônia com Energia Solar de Rastreamento e Geradores Eólicos</h2>
+                <h2>Fornecendo Eletricidade a Comunidades Isoladas na Amazônia com Energia Solar de Rastreamento e
+                    Geradores Eólicos</h2>
                 <p>
-                    Fornecendo eletricidade a áreas remotas em Ribeirinha, na Amazônia, com um sistema híbrido de energia que combina solar e eólica, permitindo iluminação e melhor qualidade de vida.
+                    Fornecendo eletricidade a áreas remotas em Ribeirinha, na Amazônia, com um sistema híbrido de
+                    energia que combina solar e eólica, permitindo iluminação e melhor qualidade de vida.
                 </p>
 
             </div>
@@ -85,7 +92,13 @@
                         </p>
                         <div class="line"></div>
                         <span>
-                            O sistemas fotovoltaicos com rastreamento solar são uma solução avançada para a geração de eletricidade sustentável. Com painéis solares que seguem automaticamente o movimento do sol ao longo do dia, maximizamos a captura de energia solar, proporcionando eficiência energética excepcional. Este produto oferece uma fonte de energia confiável para residências e empresas, reduzindo custos de eletricidade e impactos ambientais. O rastreamento solar melhora a produção de energia, tornando-o ideal para locais com alta exposição solar. Uma opção inovadora para quem busca soluções de energia limpa e eficiente.
+                            O sistemas fotovoltaicos com rastreamento solar são uma solução avançada para a geração de
+                            eletricidade sustentável. Com painéis solares que seguem automaticamente o movimento do sol
+                            ao longo do dia, maximizamos a captura de energia solar, proporcionando eficiência
+                            energética excepcional. Este produto oferece uma fonte de energia confiável para residências
+                            e empresas, reduzindo custos de eletricidade e impactos ambientais. O rastreamento solar
+                            melhora a produção de energia, tornando-o ideal para locais com alta exposição solar. Uma
+                            opção inovadora para quem busca soluções de energia limpa e eficiente.
                         </span>
                     </div>
                 </div>
@@ -135,50 +148,76 @@
 
         <!-- sobr -->
         <div id="sobre" class="sobre-container">
-            <div class="sobre-wrapper">
-                <div class="nos">
-                    <div class="nos-img-container"></div>
-                    <span>Nome</span>
+            <!-- <div class="sobre-wrapper"> -->
+            <div class="nos">
+                <div class="nos-img-container">
+                    <img src="assets/img/prof/prince.png" alt="" srcset="">
                 </div>
-                <div class="nos">
-                    <div class="nos-img-container"></div>
-                    <span>Nome</span>
-                </div>
-            </div>
-            <div class="sobre-wrapper">
-                <div class="nos">
-                    <div class="nos-img-container"></div>
-                    <span>Nome</span>
-                </div>
+                <p>
+                    Prince Nyarko
 
-                <div class="nos">
-                    <div class="nos-img-container"></div>
-                    <span>Nome</span>
-                </div>
+                </p>
+                <span>
+                    Projetista Elétrico
+                </span>
             </div>
-            <div class="sobre-wrapper-only">
+            <div class="nos">
+                <div class="nos-img-container">
+                    <img src="assets/img/prof/jean.png" alt="" srcset="">
+                </div>
+                <p>
+                    Jean Dean
 
-                <div class="nos">
-                    <div class="nos-img-container"></div>
-                    <span>Nome</span>
-                </div>
+                </p>
+                <span>
+                    Projetista de Hardware
+                </span>
             </div>
+            <!-- </div> -->
+            <!-- <div class="sobre-wrapper"> -->
+            <div class="nos">
+                <div class="nos-img-container">
+                    <img src="assets/img/prof/bren.png" alt="" srcset="">
+                </div>
+                <p>
+                    Brendo Carvalho
+                </p>
+                <span>
+                    Projetista de Hardware
+                </span>
+            </div>
+
+            <div class="nos">
+                <div class="nos-img-container">
+                    <img src="assets/img/prof/edu.png" alt="" srcset="">
+                </div>
+                <p>
+                    Eduardo Lourenço
+                </p>
+                <span>
+                    Desenvolvedor
+                </span>
+            </div>
+            <!-- </div> -->
 
         </div>
 
         <!-- forms -->
         <div id="request-form" class="request-form">
-            <h2>Faz seu Pedido antecipado</h2>
-            <div class="forms-container">
-                <form action="/" method="post">
-                    <label for="fname">Nome Completo</label>
-                    <input type="text" id="fname" name="nome" placeholder="Nome Completo..">
+            <div class="forms-text">
+                <div>
+                    <h2>
+                        Faz seu Pedido antecipado
+                    </h2>
+                </div>
+            </div>
+            <div id="forms-container" class="forms-container">
+                <form id="forms" action="/" method="post">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome Completo..">
 
-                    <label for="lname">Email</label>
-                    <input type="email" id="lname" name="Email" placeholder="seu@mail.com">
-
-                    <label for="lname">Telefone</label>
-                    <input type="tel" id="lname" name="Telefone" placeholder="DD 0000 00000.." pattern="[0-9]{2}[0-9]{4}[0-9]{5}">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="Email" placeholder="seu@mail.com">
 
                     <input type="submit" value="Submit">
                 </form>
@@ -191,7 +230,6 @@
                     <div class="mail-logo">
                         <div>
                             <img src="assets/img/mail.png" alt="" srcset="">
-
                         </div>
                         <span>
                             tusk@gmail.com
