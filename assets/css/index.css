@@ -198,6 +198,15 @@ a:hover>div,
     font-size: 2rem;
 }
 
+.helps{
+    padding: 1.5rem 0;
+}
+
+.helps>span{
+    padding-right: 0.3rem;
+    font-weight: 700 !important;
+}
+
 .solucao {
     display: flex;
     width: 100%;
@@ -677,10 +686,15 @@ input[type=submit]:hover {
 }
 
 .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 10vh;
     background: #24242b;
 }
-
+.footer>span {
+    font-size: 1.5rem;
+}
 
 @media only screen and (max-width: 770px) {
     .mobile{
@@ -813,6 +827,8 @@ input[type=submit]:hover {
     .header-text>span{
         font-size: 1.5rem;
     }
+
+   
 
     .forms-text{
         width: 100%;
