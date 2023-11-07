@@ -173,8 +173,7 @@ a:hover>div,
 
 .input-containar-2,
 .input-containar-3 {
-    margin: var(--10p) 0;
-}
+    margin: var(--10p) 10rem;}
 
 .input-containar-1 {
     background-image: url('../img/capa2.png');
@@ -201,13 +200,27 @@ a:hover>div,
     display: flex;
     width: 100%;
     height: 60vh;
-    padding: var(--10p) 5rem;
+    padding: var(--10p) 10rem;
 }
 
+.img-container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+}
+.img-w{
+    width: 100%;
+}
+.img-h{
+    height: 100%;
+    object-position: center,right;
+
+}
 .solucao>.img-container {
     width: 100%;
     height: 100%;
-    background-image: url(../img/energia-solar-e-eolica.jpg);
+    background-image: url(../img/Enegialimpa.jpg);
 }
 
 .solucao-text {
@@ -231,7 +244,7 @@ a:hover>div,
 }
 
 .input-containar-3 {
-    background-image: url('../img/equipi-solar.jpg');
+    /* background-image: url('../img/equipi-solar.jpg'); */
 }
 
 .image-cards-containar {
@@ -255,17 +268,17 @@ a:hover>div,
 }
 
 .image-card-1 {
-    background-image: url(../img/solar-ajusar.jpg);
+    background-image: url(../img/solar-card.png);
 
 }
 
 .image-card-2 {
-    background-image: url(../img/controlador.webp);
+    background-image: url(../img/controller-card.png);
 
 }
 
 .image-card-3 {
-    background-image: url(../img/geracao-energia-eolica-bg.webp);
+    background-image: url(../img/eolic-card.png);
 
 }
 
@@ -366,6 +379,8 @@ a:hover>div,
     width: 100%;
     height: 100%;
     border: red 1px solid;
+}
+.image-cover-of-header{
 }
 
 .request-form {
