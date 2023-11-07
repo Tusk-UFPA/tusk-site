@@ -253,7 +253,7 @@ a:hover>div,
     height: 90vh;
 }
 
-.input-containar-3>.sistema-inte-text{
+.input-containar-3>.sistema-inte-text, .input-containar-4>.modular{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -276,24 +276,36 @@ a:hover>div,
 
 .input-containar-4 {
     display: flex;
-    flex-direction: column;
-    background-image: url('../img/SistemaModular.png');
+    /* flex-direction: column; */
+    background-color: #fff;
+    align-items: center;
     color: #000;
     height: 90vh;
 }
 .input-containar-4>.modular {
-    width: 50%;
-    padding: 10rem;
-
+   
 }
 .input-containar-4>.modular>h2 {
 
+}
+.p-10{
+    padding-left: 10rem !important;
 }
 .image-cards-containar {
     display: flex;
     align-items: center;
     height: 80vh;
     padding: var(--10p) var(--side-padding);
+}
+
+.image-container{
+    height:100% ;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container> img{
+    object-position: center, top;
 }
 
 .image-card-1,
@@ -411,10 +423,33 @@ a:hover>div,
     display: flex;
     align-items: center;
     width: 100%;
-    height: 80vh;
-    padding: var(--10p);
-    border: rgb(0, 183, 255) 1px solid;
+    height: 90vh;
+    padding: var(--10p) 5rem;
 }
+.deshboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+
+}
+.deshboard > h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 2rem;
+}
+
+.deshboard > p{
+    /* text-align: center; */
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+
 
 .info-image,
 .info-content {
@@ -648,6 +683,28 @@ input[type=submit]:hover {
 
 
 @media only screen and (max-width: 770px) {
+    .mobile{
+        display: flex;
+    }
+    .desktop{
+        display: none !important;
+    }
+    .p-10{
+        padding: 0.5rem !important;
+    }
+    .info-containar,.input-containar-4 {
+        flex-direction: column;
+        height: 50rem;
+        padding: var(--10p) 0;
+    }
+    .deshboard>h2{
+        font-size: 1.8rem;
+    }
+
+    .deshboard>p{
+        text-align: justify;
+    }
+
     .menu-button-container {
         display: flex;
         z-index: 2;
@@ -743,14 +800,25 @@ input[type=submit]:hover {
     }
 
     .request-form {
-        background-color: #000000af;
         margin: 1rem 0 0 0;
         padding: 0;
         width: 100%;
     }
 
+    .header-text>h1{
+        font-size: 1.9rem;
+        font-weight: 800;
+        padding-bottom: 2rem;
+    }
+    .header-text>span{
+        font-size: 1.5rem;
+    }
+
+    .forms-text{
+        width: 100%;
+    }
     .forms-container {
-        max-width: 100%;
+        width: 100%;
     }
 
     .contato-container {
