@@ -21,6 +21,8 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-color: #00000070;
+    
 }
 
 body {
@@ -226,7 +228,7 @@ a:hover>div,
 .solucao-text {
     height: 100%;
     width: 100%;
-    background: #000000b0;
+    /* background: #000000b0; */
     padding: 2rem 1rem;
     overflow: hidden;
 }
