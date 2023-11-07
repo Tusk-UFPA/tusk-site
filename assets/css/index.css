@@ -168,14 +168,14 @@ a:hover>div,
     background-position: center;
     background-blend-mode: multiply;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     height: 70vh;
 }
 
 .input-containar-2,
 .input-containar-3 {
-    margin: var(--10p) 10rem;}
+    margin: var(--10p) 0rem;}
 
 .input-containar-1 {
     background-image: url('../img/capa2.png');
@@ -242,13 +242,53 @@ a:hover>div,
 }
 
 .input-containar-2 {
-    background-image: url('../img/Energia-solar-1.jpg');
+    background-image: url('../img/Dashboard.png');
+    height: 90vh;
 }
 
 .input-containar-3 {
-    /* background-image: url('../img/equipi-solar.jpg'); */
+    background-image: url('../img/Sistemainteligente.png');
+    justify-content: end;
+    color: #000;
+    height: 90vh;
 }
 
+.input-containar-3>.sistema-inte-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10rem;
+    
+}
+
+.input-containar-3>.sistema-inte-text >h2,.input-containar-4>.modular>h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.input-containar-3>.sistema-inte-text >p, .input-containar-4>.modular>p{
+    text-align: justify;
+}
+
+.input-containar-4 {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/SistemaModular.png');
+    color: #000;
+    height: 90vh;
+}
+.input-containar-4>.modular {
+    width: 50%;
+    padding: 10rem;
+
+}
+.input-containar-4>.modular>h2 {
+
+}
 .image-cards-containar {
     display: flex;
     align-items: center;
@@ -595,6 +635,10 @@ input[type=submit]:hover {
     padding-bottom: 2.5rem;
 
 
+}
+
+.mobile{
+    display: none;
 }
 
 .footer {
