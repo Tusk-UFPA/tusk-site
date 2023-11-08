@@ -20,7 +20,7 @@ const connectDB = async () => {
     const conn = await mongoose.connect(process.env.MONGODB, {
       dbName: process.env.DBname,
     });
-    console.log(`MongoDB Connected: ${conn.connection}`);
+    console.log(`MongoDB Connected`);
   } catch (err) {
     console.log(err);
     process.exit(1);
@@ -54,7 +54,6 @@ app.get("/", async (req, res) => {
     const index = 1;
     await postNumberOfAcess(index);
   } else {
-    console.log(count);
     const index = count.length + 1;
     await postNumberOfAcess(index);
   }
