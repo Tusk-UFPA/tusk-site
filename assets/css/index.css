@@ -556,6 +556,8 @@ input[type=submit]:hover {
 
 .contato-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background: #24242b;
     height: 100%;
 }

@@ -2,32 +2,58 @@ from flask import Flask, request, send_from_directory
 import os
 import subprocess
 import json
+from typing import List
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+from dotenv import load_dotenv
+from database.mongoModels import user, accesse
 
 
 js_dr = os.path.join(os.path.dirname(__file__), "assets")
 img_dr = os.path.join(os.path.dirname(__file__), "assets/img")
 css_dr = os.path.join(os.path.dirname(__file__), "assets/css")
 
-app = Flask(__name__,static_folder=js_dr)
+app = Flask(__name__, static_folder=js_dr)
 
-@app.route('/')
+load_dotenv(".env")
+
+uri = os.getenv("MONGODB")
+
+# # Send a ping to confirm a successful connection
+try:
+    client = MongoClient(uri)
+    client.admin.command("ping")
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
+
+DB = client.tuskdb
+
+
+@app.route("/")
 def index():
+    count = 1
+    try:
+        # if  DB.numerioDeAcesso.find():
+        #     print(allAccess)
+        # print(DB.acc.count_documents("count:"))
+        for _ in DB.numerioDeAcesso.find():
+            count += 1
+        data = accesse = {"count": count}
+        DB.numerioDeAcesso.insert_one(data)
+    except Exception as e:
+        print(e)
     return send_from_directory(os.path.dirname(__file__), "index.html")
 
-@app.route('/', methods=['POST'])
+
+@app.route("/", methods=["POST"])
 def post():
-    data=request.json
-    print(data)
+    try:
+        data = user = request.json
+
+        newUser = DB.users.insert_one(data)
+    except Exception as e:
+        print(e)
     return send_from_directory(os.path.dirname(__file__), "tanx.html")
 
-
-# @app.route('/assets/js/<path:filename>"')
-# def js(filename):
-#     print(filename)
-#     return send_from_directory(js_dr, filename)
-# @app.route('/assets/img/<path:filename>"')
-# def img(filename):
-#     return send_from_directory(img_dr, filename)
-# @app.route('/assets/css/<path:filename>"')
-# def css(filename):
-#     return send_from_directory(css_dr, filename)
