@@ -24,7 +24,7 @@ uri = os.getenv("MONGODB")
 
 # # Send a ping to confirm a successful connection
 try:
-    client = MongoClient("mongodb+srv://server:yTtYDqy0PsZXTn6g@cluster0.5hv88yt.mongodb.net/?retryWrites=true&w=majority")
+    client = MongoClient(uri)
     client.admin.command("ping")
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
