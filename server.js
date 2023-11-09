@@ -27,21 +27,18 @@ const connectDB = async () => {
   }
 };
 
-
-connectDB().then(() => {
- 
-});
+// connectDB().then(() => {});
 
 let options = {
   dotfiles: "ignore",
   etag: false,
   extensions: ["css", "js", "ico", "jpg", "jpeg", "png", "svg"],
-    index: ["index.html"],
+  index: ["index.html"],
   maxAge: "1m",
   redirect: false,
 };
 
-app.use("/public", express.static(__dirname + "/public",options));
+app.use("/public", express.static(__dirname + "/public", options));
 
 // app.use(cors());
 app.use(express.json());
@@ -65,9 +62,8 @@ app.post("/", async (req, res) => {
   res.sendFile(path.join(__dirname, "/tanx.html"));
 });
 
-// connectDB().then(() => {
- 
-// });
- app.listen(port, () => {
+connectDB().then(() => {
+  app.listen(port, () => {
     console.log(`server is runing on port: ${port}`);
   });
+});
