@@ -14,6 +14,13 @@ const port = process.env.PORT;
 
 const app = express();
 
+/**
+ * Connects to the MongoDB database.
+ * @async
+ * @function connectDB
+ * @throws {Error} If there is an error connecting to the database.
+ * @returns {Promise<void>} A promise that resolves when the connection is successful.
+ */
 const connectDB = async () => {
   try {
     mongoose.set("strictQuery", false);
